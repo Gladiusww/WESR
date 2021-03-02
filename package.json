@@ -5,9 +5,9 @@
   "name": "hello-express",
   "version": "0.0.1",
   "description": "Register V12",
-  "main": "ewlust.js",
+  "main": "Lrows.js",
   "scripts": {
-    "start": "node ewlust.js"
+    "start": "node Lrows.js"
   },
   "dependencies": {
     "chalk": "^4.1.0",

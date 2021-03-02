@@ -1,22 +1,22 @@
   {
-  "prefix" : "prefix",
-  "sahip" : "sahibid",
-  "sunucu" : "sunucuid",
-  "token" : "token",
+  "prefix" : "!",
+  "sahip" : "585579647132106765",
+  "sunucu" : "815713525426683944",
+  "token" : "ODA3MjE2OTY2NDAxNjU0ODY0.YB0xYg.6as0KfO4wrm8UqsDTwfKLE-XBww",
   
   "tag" : "tag",
 
-  "yetkiliROL" : "kayıtrolid",
+  "yetkiliROL" : "816410408818180107",
 
-  "erkekROL" : "erkekrolid",
+  "erkekROL" : "816410423570071591",
   "erkekICON" : "erkekıconrolid",
   "erkekSEMBOL" : "erkeksembolrolid",
 
-  "kadınROL" : "kadınrolid",
+  "kadınROL" : "816410436555505736",
   "kadınICON" : "kadınıconolid",
   "kadınSEMBOL" : "kadınsembolrolid",
 
-  "kayıtsızROL" : "kayıtsızolid",
+  "kayıtsızROL" : "816410907222867979",
 
-  "botROL" : "botunuzunrolü"
+  "botROL" : "816411032095686677"
 }

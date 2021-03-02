@@ -157,7 +157,7 @@ client.on("guildMemberAdd", member => {
   if (kurulus > 1296000000) kontrol = 'Hesap Güvenli'
     moment.locale("tr");
     kanal.send(`
-**WELCOME TO EWLUST
+**Wenzy'e Hoşgeldin
 
 Hoşgeldin <@`+ member + `> Seninle ${member.guild.memberCount} Kişiyiz
 
