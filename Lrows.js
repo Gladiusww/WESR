@@ -146,7 +146,7 @@ client.on("guildMemberAdd", member => {
             '7': `<a:790204451662462986:802279093155790868>`,
             '8': `<a:790204463729868810:802279117780418570>`,
             '9': `<a:790204476593668106:802279096474009601>`}[d];})}
-    const kanal = member.guild.channels.cache.find(r => r.id === "816410362919780374");
+    const kanal = member.guild.channels.cache.find(r => r.id === "816419804118384660");
     let user = client.users.cache.get(member.id);
     require("moment-duration-format");
       const kurulus = new Date().getTime() - user.createdAt.getTime();  
