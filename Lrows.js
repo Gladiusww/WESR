@@ -14,7 +14,7 @@ const snekfetch = require('snekfetch');//
 //
 
 var prefix = ayarlar.prefix;//
-//
+
 const log = message => {//
     console.log(`${message}`);//
 };
@@ -121,7 +121,6 @@ let kayıtsız = ayarlar.kayıtsızROL
 client.on("guildMemberAdd", member => {
   member.roles.add(kayıtsız);
 });
-
 //-----------------------GİRENE-ROL-VERME SON----------------------\\     
 
 
@@ -147,14 +146,14 @@ client.on("guildMemberAdd", member => {
             '7': `<a:790204451662462986:802279093155790868>`,
             '8': `<a:790204463729868810:802279117780418570>`,
             '9': `<a:790204476593668106:802279096474009601>`}[d];})}
-    const kanal = member.guild.channels.cache.find(r => r.id === "801700222723424277");
+    const kanal = member.guild.channels.cache.find(r => r.id === "816410362919780374");
     let user = client.users.cache.get(member.id);
     require("moment-duration-format");
       const kurulus = new Date().getTime() - user.createdAt.getTime();  
      const gecen = moment.duration(kurulus).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
     var kontrol;
-  if (kurulus < 1296000000) kontrol = 'Güvenilir Gözükmüyor.'
-  if (kurulus > 1296000000) kontrol = 'Hesap Güvenli'
+  if (kurulus < 1296000000) kontrol = '<:supheli:816413589165441046> **Güvenilir Gözükmüyor.**'
+  if (kurulus > 1296000000) kontrol = '<:guvenli:816413373926473768> **Hesap Güvenli.**'
     moment.locale("tr");
     kanal.send(`
 **Wenzy'e Hoşgeldin
@@ -163,7 +162,7 @@ Hoşgeldin <@`+ member + `> Seninle ${member.guild.memberCount} Kişiyiz
 
 Sunucuya Kayıt Olmak İçin Sol Taraftaki #Voice Confirmed Odalarına Geçiş Yapabilirsin     
 
-Bu Roldeki Arkadaşlarım Seninle İlgilenecektir  <@&801700786815500379> 
+Bu Roldeki Arkadaşlarım Seninle İlgilenecektir  <@&816410408818180107> 
 
 `+kontrol+`**`)});
 
@@ -174,10 +173,10 @@ Bu Roldeki Arkadaşlarım Seninle İlgilenecektir  <@&801700786815500379>
 //-----------------------TAG-ROL-LOG----------------------\\  
 client.on("userUpdate", async (oldUser, newUser) => {
   if (oldUser.username !== newUser.username) {
-  const tag = 'tagınız'
-  const sunucu = 'sunucuid'
-  const log = 'logid'
-  const rol = 'rolid'
+  const tag = '◈'
+  const sunucu = '816410362232438856'
+  const log = '816412072971075585'
+  const rol = '816412272028680203'
 
   try {
 
