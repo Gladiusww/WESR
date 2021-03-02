@@ -8,10 +8,10 @@ exports.run = async(client, message, args) => {
       let tag = ayarlar.tag 
 
 
- let ewlust1 = new discord.MessageEmbed()
+ let lrows1 = new discord.MessageEmbed()
 
 .setDescription(`**Kullanıcının İsmi Başarı İle Düzenlendi**`).setColor('#ff0000')
- if (!message.member.roles.cache.get(yetkili)) return message.channel.send(ewlust) 
+ if (!message.member.roles.cache.get(yetkili)) return message.channel.send(lrows) 
  
   let member = message.mentions.members.first();
 if (!member) return message.channel.send(new discord.MessageEmbed().setColor('#ff0000').setDescription(`İsim Değiştireceğin Kullanıcıyı Belirtmelisin! \n\n **Örnek Kullanım:** ${d}isim @kullanıcı <isim> <yaş>`))
@@ -21,11 +21,11 @@ let yaş = args[2]
 if (!yaş) return message.channel.send(new discord.MessageEmbed().setColor('#ff0000').setDescription(`Yaşını Belirtmelisin! \n\n **Örnek Kullanım:** ${d}isim @kullanıcı <isim> <yaş>`))
   member.setNickname(`${tag} ${isim} | ${yaş}`)
 
-const ewlust = new discord.MessageEmbed()
+const lrows = new discord.MessageEmbed()
 .setColor('#00ff51')
 .setDescription(`**${member}  kullanıcının ismini  \`${tag} ${isim}  | ${yaş}\` olarak ayarladım**`)
 .setFooter(`Komut ${message.author.tag} Tarafından Kullanıldı ! `)
-message.channel.send(ewlust1)
+message.channel.send(lrows1)
 
 
 }

@@ -1,35 +1,35 @@
-const Discord = require('discord.js');//
-const client = new Discord.Client();//
-const ayarlar = require('./ayarlar.json');//
-const chalk = require('chalk');//
-const moment = require('moment');//
-var Jimp = require('jimp');//
-const { Client, Util } = require('discord.js');//
-const fs = require('fs');//
-const db = require('quick.db');//
-const express = require('express');//
-require('./util/eventLoader.js')(client);//
-const path = require('path');//
-const snekfetch = require('snekfetch');//
-//
+const Discord = require('discord.js');
+const client = new Discord.Client();
+const ayarlar = require('./ayarlar.json');
+const chalk = require('chalk');
+const moment = require('moment');
+var Jimp = require('jimp');
+const { Client, Util } = require('discord.js');
+const fs = require('fs');
+const db = require('quick.db');
+const express = require('express');
+require('./util/eventLoader.js')(client);
+const path = require('path');
+const snekfetch = require('snekfetch');
 
-var prefix = ayarlar.prefix;//
 
-const log = message => {//
-    console.log(`${message}`);//
+var prefix = ayarlar.prefix;
+
+const log = message => {
+    console.log(`${message}`);
 };
 
-client.commands = new Discord.Collection();//
-client.aliases = new Discord.Collection();//
-fs.readdir('./komutlar/', (err, files) => {//
-    if (err) console.error(err);//
-    log(`${files.length} komut yüklenecek.`);//
-    files.forEach(f => {//
-        let props = require(`./komutlar/${f}`);//
-        log(`Yüklenen komut: ${props.help.name}.`);//
-        client.commands.set(props.help.name, props);//
-        props.conf.aliases.forEach(alias => {//
-            client.aliases.set(alias, props.help.name);//
+client.commands = new Discord.Collection();
+client.aliases = new Discord.Collection();
+fs.readdir('./komutlar/', (err, files) => {
+    if (err) console.error(err);
+    log(`${files.length} komut yüklenecek.`);
+    files.forEach(f => {
+        let props = require(`./komutlar/${f}`);
+        log(`Yüklenen komut: ${props.help.name}.`);
+        client.commands.set(props.help.name, props);
+        props.conf.aliases.forEach(alias => {
+            client.aliases.set(alias, props.help.name);
         });
     });
 });
@@ -136,15 +136,15 @@ client.on("guildMemberAdd", member => {
       if(üs) {
         üyesayısı = üyesayısı.replace(/([0-9999])/g, d => {
           return {
-            '0': `<a:790204273648205835:802279106614919180>`,
-            '1': `<a:790204346192232448:802279092153090050>`,
-            '2': `<a:790204390328893440:802279118024605746>`,
-            '3': `<a:790204273648205835:802279106614919180>`,
-            '4': `<a:790204411452325898:802279109202935858>`,
-            '5': `<a:790204421870190593:802279117742538754>`,
-            '6': `<a:790204439717085204:802279109228757052>`,
-            '7': `<a:790204451662462986:802279093155790868>`,
-            '8': `<a:790204463729868810:802279117780418570>`,
+            '0': `<a:790204273648205835:802279106614919180>`, // SAYI EMOJİ ID
+            '1': `<a:790204346192232448:802279092153090050>`, // SAYI EMOJİ ID
+            '2': `<a:790204390328893440:802279118024605746>`, // SAYI EMOJİ ID
+            '3': `<a:790204273648205835:802279106614919180>`, // SAYI EMOJİ ID
+            '4': `<a:790204411452325898:802279109202935858>`, // SAYI EMOJİ ID
+            '5': `<a:790204421870190593:802279117742538754>`, // SAYI EMOJİ ID
+            '6': `<a:790204439717085204:802279109228757052>`, // SAYI EMOJİ ID
+            '7': `<a:790204451662462986:802279093155790868>`, // SAYI EMOJİ ID
+            '8': `<a:790204463729868810:802279117780418570>`, // SAYI EMOJİ ID
             '9': `<a:790204476593668106:802279096474009601>`}[d];})}
     const kanal = member.guild.channels.cache.find(r => r.id === "816419804118384660");
     let user = client.users.cache.get(member.id);
@@ -152,8 +152,8 @@ client.on("guildMemberAdd", member => {
       const kurulus = new Date().getTime() - user.createdAt.getTime();  
      const gecen = moment.duration(kurulus).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
     var kontrol;
-  if (kurulus < 1296000000) kontrol = '<:supheli:816413589165441046> **Güvenilir Gözükmüyor.**'
-  if (kurulus > 1296000000) kontrol = '<:guvenli:816413373926473768> **Hesap Güvenli.**'
+  if (kurulus < 1296000000) kontrol = '**<:supheli:816413589165441046> **Güvenilir Gözükmüyor.**'
+  if (kurulus > 1296000000) kontrol = '**<:guvenli:816413373926473768> Hesap Güvenli.**'
     moment.locale("tr");
     kanal.send(`
 **Wenzy'e Hoşgeldin
