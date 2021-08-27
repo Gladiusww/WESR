@@ -19,7 +19,7 @@ return message.reply(`Bu işlemi sadece yetkililer kullanabilir!!!`)
 
 const member = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));
 
-if(!member) return message.channel.send(`Bir kullanıcı belirt. `)
+if(!member) return message.channel.send(`Bir kullanıcı belirt lütfen. `)
 if(member.id === message.author.id) return message.channel.send('Kendini kayıt edemezsin.')
 if(member.id === client.user.id) return message.channel.send('Botu kayıt edemezsin.')
 if(member.id === message.guild.OwnerID) return message.channel.send('Sunucu sahibini kayıt edemezsin.')
